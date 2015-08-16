@@ -11,7 +11,7 @@ RUN \
   cp /usr/share/syslinux/chain.c32 /tftpboot/;
   mkdir /tftpboot/pxelinux.cfg"
 
-ADD tftp /etc/xinetd.d/
-ADD dhcpd.conf /etc/dhpc/
+COPY tftp /etc/xinetd.d/
+COPY dhcpd.conf /etc/dhpc/
 
 ENTRYPOINT /bin/bash
